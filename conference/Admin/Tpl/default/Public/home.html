@@ -1,0 +1,23 @@
+<tagLib name="html,cx" />
+<include file="Public:header" />
+<div class="cbody b-box blank10">
+	<include file="Public:menu" />
+	<div class="b-area-w f_r">
+		<h4>主页内容编辑</h4>
+		<form name="pagesform" method="post" action="__URL__/edits">
+		<table border="0" cellspacing="1" class="tb-b">
+			<tr>
+				<th>标题</th>
+				<td><input type="text" name="title" value="{$title}" class="input-long" /></td>
+			</tr>
+			<tr>
+				<th>内容</th>
+				<td><html:editor id="editor" name="content" type="FCKeditor" content="{$content}" /></td>
+			</tr>
+		</table>
+		<div align="center"><input type="submit" value="提交" class="input-btn-b" onclick="return validate_form()"/></div>
+		</form>
+	</div>
+	<div class="clear"></div>
+</div>
+<include file="Public:footer" />

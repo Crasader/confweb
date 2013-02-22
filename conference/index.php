@@ -1,0 +1,10 @@
+<?php
+define('THINK_PATH','./ThinkPHP/');
+//
+define('APP_NAME','ConferenceApp');
+define('APP_PATH','./ConferenceApp');
+//
+require(THINK_PATH."/ThinkPHP.php");
+//
+App::run();
+?>

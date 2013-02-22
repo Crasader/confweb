@@ -1,0 +1,11 @@
+<html>
+<include file="Public:header" />
+<include file="Public:sidebar" />
+<title>住宿</title>
+<table border="1">
+<volist name="acco" id="vo">
+	<tr><td><image src="{$vo.photo}"></td><td><a href="{$vo.link}" target="_blank">{$vo.name}</a></td></tr>
+</volist>
+</table>
+<include file="Public:footer" />
+</html>

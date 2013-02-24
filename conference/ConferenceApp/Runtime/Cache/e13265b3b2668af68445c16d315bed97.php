@@ -6,14 +6,9 @@
 <link href="../Public/templatemo_style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<link href="../Public/templatemo_style.css" rel="stylesheet" type="text/css" />
 <div id="templatemo_header_wrapper">
-  <div id="templatemo_header">
-    <div id="site_logo">
-	<image src="__PUBLIC__/logo.jpg" />
-	</div>
-
-	</div>
+  	<image src="__PUBLIC__/logo.jpg" />
+	
   <!-- end of header -->
 </div>
 <style type="text/css">

@@ -1,8 +1,25 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>主页</title>
-<include file="Public:header" />
+<link href="../Public/templatemo_style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="templatemo_header_wrapper">
+  	<image src="__PUBLIC__/logo.jpg" />
+	
+  <!-- end of header -->
+</div>
 <include file="Public:sidebar" />
-<div>{$title}</div>
-<div>{$content}</div>
-<include file="Public:footer" />
+<div style="float:left" style="margin-top:10px">{$title}</div>
+<div style="float:left">{$content}</div>
+
+<div id="templatemo_footer">
+		<p style="text-align:center"><br>地址：{$address}<br/>
+			电话：{$phone1},{$phone2},{$phone3}<br/>
+			传真：{$fax}</a></p>
+</div>
+
+</body>
 </html>

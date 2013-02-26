@@ -27,29 +27,29 @@
 	<?php else: ?>
 	<li><a href="__APP__/Members">首页管理</a></li><?php endif; ?>
 	
-	<?php if($menu == 'News'): ?><li><a href="__APP__/News" class="home-link">委员会管理</a></li>
+	<?php if($menu == 'Committee'): ?><li><a href="__APP__/Committee" class="home-link">委员会管理</a></li>
 	<?php else: ?>
-	<li><a href="__APP__/News">委员会管理</a></li><?php endif; ?>
+	<li><a href="__APP__/Committee">委员会管理</a></li><?php endif; ?>
 	
-	<?php if($menu == 'Products'): ?><li><a href="__APP__/Products" class="home-link">演讲者管理</a></li>
+	<?php if($menu == 'Speaker'): ?><li><a href="__APP__/InvitedSpeaker" class="home-link">演讲者管理</a></li>
 	<?php else: ?>
-	<li><a href="__APP__/Products">演讲者管理</a></li><?php endif; ?>	
+	<li><a href="__APP__/InvitedSpeaker">演讲者管理</a></li><?php endif; ?>	
 	
-	<?php if($menu == 'Pages'): ?><li><a href="__APP__/Pages" class="home-link">会议流程管理</a></li>
+	<?php if($menu == 'Agenda'): ?><li><a href="__APP__/Agenda" class="home-link">会议流程管理</a></li>
 	<?php else: ?>
-	<li><a href="__APP__/Pages">会议流程管理</a></li><?php endif; ?>
+	<li><a href="__APP__/Agenda">会议流程管理</a></li><?php endif; ?>
 	
-	<?php if($menu == 'Pages'): ?><li><a href="__APP__/Pages" class="home-link">会议地点管理</a></li>
+	<?php if($menu == 'Venue'): ?><li><a href="__APP__/Venue" class="home-link">会议地点管理</a></li>
 	<?php else: ?>
-	<li><a href="__APP__/Pages">会议地点管理</a></li><?php endif; ?>
+	<li><a href="__APP__/Venue">会议地点管理</a></li><?php endif; ?>
 	
-	<?php if($menu == 'Pages'): ?><li><a href="__APP__/Pages" class="home-link">住宿管理</a></li>
+	<?php if($menu == 'Accomondation'): ?><li><a href="__APP__/Accomondation" class="home-link">住宿管理</a></li>
 	<?php else: ?>
-	<li><a href="__APP__/Pages">住宿管理</a></li><?php endif; ?>
+	<li><a href="__APP__/Accomondation">住宿管理</a></li><?php endif; ?>
 	
-	<?php if($menu == 'Pages'): ?><li><a href="__APP__/Pages" class="home-link">会员管理</a></li>
+	<?php if($menu == 'Registrant'): ?><li><a href="__APP__/Registrant" class="home-link">会员管理</a></li>
 	<?php else: ?>
-	<li><a href="__APP__/Pages">会员管理</a></li><?php endif; ?>
+	<li><a href="__APP__/Registrant">会员管理</a></li><?php endif; ?>
 	
 	<?php if($menu == 'Toolbox'): ?><li><a href="__APP__/Toolbox" class="home-link">网站设置</a></li>
 	<?php else: ?>

@@ -62,13 +62,13 @@ function check(){
 	<?php else: ?>
 	<li><a href="__APP__/Index">管理首页</a></li><?php endif; ?>
 	
-	<?php if($menu == 'Members'): ?><li><a href="__APP__/Members" class="home-link">首页管理</a></li>
+	<?php if($menu == 'Home'): ?><li><a href="__APP__/Home" class="home-link">首页管理</a></li>
 	<?php else: ?>
-	<li><a href="__APP__/Members">首页管理</a></li><?php endif; ?>
+	<li><a href="__APP__/Home">首页管理</a></li><?php endif; ?>
 	
-	<?php if($menu == 'Committee'): ?><li><a href="__APP__/Committee" class="home-link">委员会管理</a></li>
+	<?php if($menu == 'Committee'): ?><li><a href="__APP__/Allcommittee" class="home-link">委员会管理</a></li>
 	<?php else: ?>
-	<li><a href="__APP__/Committee">委员会管理</a></li><?php endif; ?>
+	<li><a href="__APP__/Allcommittee">委员会管理</a></li><?php endif; ?>
 	
 	<?php if($menu == 'Speaker'): ?><li><a href="__APP__/InvitedSpeaker" class="home-link">演讲者管理</a></li>
 	<?php else: ?>

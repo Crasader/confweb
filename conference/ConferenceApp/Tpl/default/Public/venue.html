@@ -15,7 +15,7 @@
 <title>会议地点</title>
 <table border="1">
 <volist name="place" id="vo">
-	<tr><td rowspan="3"><image src="{$vo.photo}"></td><td>{$vo.confname}({$vo.time})</td></tr>
+	<tr><td rowspan="3"><image src="__ROOT__/Attachments/photo/{$vo.photo}"></td><td>{$vo.confname}({$vo.time})</td></tr>
 	<tr><td>{$vo.place}</td></tr>
 	<tr><td>{$vo.note}</td></tr>
 </volist>

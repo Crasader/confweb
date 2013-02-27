@@ -1,0 +1,101 @@
+<style type="text/css">
+table.info
+{
+}
+</style>
+<script language="javascript">
+function check(){
+	var iter = document.getElementsByName("chinesename")
+	var i = iter[0].value
+	if(i == "")
+	{
+		alert("中文名不能为空！")
+		return false
+	}
+	iter = document.getElementsByName("englishname")
+	i = iter[0].value
+	if(i == "")
+	{
+		alert("英文名不能为空！")
+		return false
+	}
+	iter = document.getElementsByName("introduction")
+	i = iter[0].value
+	if(i == "")
+	{
+		alert("简介不能为空！")
+		return false
+	}
+	iter = document.getElementsByName("rank")
+	i = iter[0].value
+	if(isNaN(i))
+	{
+		alert("排名必须为数字！")
+		return false
+	}
+	return true
+}
+</script>
+<include file="Public:header" />
+<script type="text/javascript" src="__ROOT__/Public/Js/personreview.js"></script>
+<div class="cbody b-box blank10">
+	<include file="Public:menu" />
+	<div class="b-area-w f_r">
+	<switch name="dsp">
+		<case value="detail">
+			<h4>{$title}会议地点信息</h4>
+			<form name="memberform" method="post" enctype="multipart/form-data" action="__URL__/{$action}">
+			<table>
+			<tr><th>会议名称</th><td><input type="text" name="confname" value="{$venue.confname}" /></td></tr>
+			<tr><th>时间</th><td><input type="text" name="time" value="{$venue.time}" /></td></tr>
+			<tr><th>地点</th><td><input type="text" name="place" value="{$venue.place}" /></td></tr>
+			<tr><th>照片</th><td><input type="file" name="photo" value="{$venue.photo}" />
+			<tr><th>备注</th><td><input type="text" name="note" value="{$venue.note}" /><input type="hidden" name="id" value="{$_GET['id']}"></td></tr>
+			</table>
+			<div align="center"><input type="submit" value="提交" class="input-btn-b" onclick="return check()"/></div>
+		</form>
+		</case>
+		
+		<default />
+		<h4>会议地点信息管理</h4>
+		<include file="Public:searchbar" />
+		<form name="memberform" method="post" action="__URL__/batch">
+		<table width="100%" border="0" cellspacing="1" class="tb-a blank5">
+			<tr>
+				<th width="20"><input name="checkbox" type="checkbox" class="input-cb" onClick="selAll(this)" /></th>
+				<th width="150">ID</th>
+				<th>名称</th>
+				<th width="240">操作</th>
+			</tr>
+			<volist name="venue" id="u">
+			<tr>
+				<td><input name="id[]" type="checkbox" id="id[]" value="{$u.id}" class="input-cb" /></td>
+				<td id={$u.id}>{$u.id}</td>
+				<td>{$u.confname}</td>
+				<script language="javascript">
+					function confirmDel(value) {
+						var items=value.split("/");
+						var newsid=items[items.length-1];
+						var title=document.getElementById(newsid).innerText;
+						if (!confirm("确认要删除记录:"+title)) {
+							window.event.returnValue = false;
+						}
+					}
+				</script>
+				<td><a href="__URL__/edit/id/{$u.id}">编辑</a>  <a href="__URL__/batch/act/delete/id/{$u.id}" onClick="confirmDel(this.href)">删除</a></td>
+			</tr>
+			</volist>
+			<tr>
+				<td colspan="6" align="left">
+					<input name="act" type="radio" value="delete" />删除
+					<input type="submit" value="提交" class="input-btn-c" />
+				</td>
+			</tr>
+		</table>
+		</form>
+		<include file="Public:paging" />
+	</switch>
+	</div>
+	<div class="clear"></div>
+</div>
+<include file="Public:footer" />

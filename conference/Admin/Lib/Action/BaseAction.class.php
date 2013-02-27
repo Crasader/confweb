@@ -46,8 +46,7 @@ class BaseAction extends Action{
         import("ORG.Net.UploadFile"); 
         $upload = new UploadFile();  
         isset($maxsize) ? $upload->maxSize = $maxsize : $upload->maxSize = 5048576; //1M
-		$upload->savePath = "__PUBLIC__/program.pdf";
-		//isset($path) ? $upload->savePath = $savepath = "./Attachments/".$path."/" : $upload->savePath = "./Attachments/Others/";
+		isset($path) ? $upload->savePath = $savepath = "./Attachments/".$path."/" : $upload->savePath = "./Attachments/Others/";
 		if(!is_dir($savepath)) @mk_dir($savepath);
         $upload->allowExts = explode(',','gif,png,jpg,jpeg,pdf,doc,docx'); 
 		if($thumb){

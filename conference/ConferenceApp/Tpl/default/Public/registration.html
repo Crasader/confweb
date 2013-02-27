@@ -104,6 +104,20 @@ function Check()
 	}
 	return true
 }
+function changebook()
+{
+	var b = document.getElementsByName("book")
+	var s = document.getElementsByName("single")
+	var r = b[0].value
+	if(r == "否")
+	{
+		s[0].disabled = true
+	}
+	else
+	{
+		s[0].disabled = false
+	}
+}
 </script>
 <form name="reg" method="post" action="__URL__/dealreg">
 <table>
@@ -135,7 +149,7 @@ function Check()
 			</select></td></tr>
 <tr><td>到达日期</td><td><input name="arrmonth" type="text" />月<input name="arrdate" type="text" />日<font color="red">*</font></td></tr>
 <tr><td>启程日期</td><td><input name="depmonth" type="text" />月<input name="depdate" type="text" />日<font color="red">*</font></td></tr>
-<tr><td>预定房间</td><td><select name="book">
+<tr><td>预定房间</td><td><select name="book" onchange="changebook()">
 				<option value="是">是</option>
 				<option value="否">否</option>
 			</select></td></tr>

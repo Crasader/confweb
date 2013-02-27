@@ -3,46 +3,6 @@ table.info
 {
 }
 </style>
-<script language="javascript">
-function check(){
-	var iter = document.getElementsByName("chinesename")
-	var i = iter[0].value
-	if(i == "")
-	{
-		alert("中文名不能为空！")
-		return false
-	}
-	iter = document.getElementsByName("englishname")
-	i = iter[0].value
-	if(i == "")
-	{
-		alert("英文名不能为空！")
-		return false
-	}
-	iter = document.getElementsByName("school")
-	i = iter[0].value
-	if(i == "")
-	{
-		alert("学校名不能为空！")
-		return false
-	}
-	iter = document.getElementsByName("introduction")
-	i = iter[0].value
-	if(i == "")
-	{
-		alert("简介不能为空！")
-		return false
-	}
-	iter = document.getElementsByName("rank")
-	i = iter[0].value
-	if(isNaN(i))
-	{
-		alert("排名必须为数字！")
-		return false
-	}
-	return true
-}
-</script>
 <include file="Public:header" />
 <script type="text/javascript" src="__ROOT__/Public/Js/personreview.js"></script>
 <div class="cbody b-box blank10">
@@ -50,23 +10,30 @@ function check(){
 	<div class="b-area-w f_r">
 	<switch name="dsp">
 		<case value="detail">
-			<h4><a href="__APP__/InvitedSpeaker">注册会员管理</a>>>{$title}</h4>
-			<form name="memberform" method="post" enctype="multipart/form-data" action="__URL__/{$action}">
+			<h4><a href="__APP__/Registrant">注册会员管理</a>>>详细</h4>
 			<table>
-			<tr><th>中文名</th><td><input type="text" name="chinesename" value="{$person.chinesename}" /></td></tr>
-			<tr><th>英文名</th><td><input type="text" name="englishname" value="{$person.englishname}" /></td></tr>
-			<tr><th>学校</th><td><input type="text" name="school" value="{$person.school}" /></td></tr>
-			<tr><th>简介</th><td><input type="text" name="introduction" value="{$person.introduction}" /></td></tr>
-			<tr><th>排名</th><td><input type="text" name="rank" value="{$person.rank}" />
-			<input type="hidden" name="id" value="{$_GET['id']}"></td></tr>
+			<tr><th>姓名</th><td>{$p.name}</td></tr>
+			<tr><th>密码</th><td>{$p.password}</td></tr>
+			<tr><th>职业</th><td>{$p.occupation}</td></tr>
+			<tr><th>性别</th><td>{$p.gender}</td></tr>
+			<tr><th>邮箱</th><td>{$p.email}</td></tr>
+			<tr><th>学校/组织</th><td>{$p.organization}</td></tr>
+			<tr><th>地址</th><td>{$p.address}</td></tr>
+			<tr><th>邮编</th><td>{$p.zipcode}</td></tr>
+			<tr><th>电话</th><td>{$p.phone}</td></tr>
+			<tr><th>传真</th><td>{$p.fax}</td></tr>
+			<tr><th>是否报告</th><td>{$p.report}</td></tr>
+			<tr><th>启程日期</th><td>{$p.departuredate}</td></tr>
+			<tr><th>到达日期</th><td>{$p.arrivaldate}</td></tr>
+			<tr><th>是否预定房间</th><td>{$p.book}</td></tr>
+			<tr><th>是否单人间</th><td>{$p.single}</td></tr>
+			<tr><th>特殊要求</th><td>{$p.special}</td></tr>
 			</table>
-			<div align="center"><input type="submit" value="提交" class="input-btn-b" onclick="return check()"/></div>
 		</form>
 		</case>
 		
 		<default />
 		<h4>注册会员管理</h4>
-		<include file="Public:searchbar" />
 		<form name="memberform" method="post" action="__URL__/batch">
 		<table width="100%" border="0" cellspacing="1" class="tb-a blank5">
 			<tr>
@@ -79,7 +46,7 @@ function check(){
 			<tr>
 				<td><input name="id[]" type="checkbox" id="id[]" value="{$u.id}" class="input-cb" /></td>
 				<td id={$u.id}>{$u.id}</td>
-				<td>{$u.englishname}({$u.chinesename})</td>
+				<td>{$u.name}</td>
 				<script language="javascript">
 					function confirmDel(value) {
 						var items=value.split("/");
@@ -90,7 +57,7 @@ function check(){
 						}
 					}
 				</script>
-				<td><a href="__URL__/edit/id/{$u.id}">编辑</a>  <a href="__URL__/batch/act/delete/id/{$u.id}" onClick="confirmDel(this.href)">删除</a></td>
+				<td><a href="__URL__/detail/id/{$u.id}">详情</a>  <a href="__URL__/batch/act/delete/id/{$u.id}" onClick="confirmDel(this.href)">删除</a></td>
 			</tr>
 			</volist>
 			<tr>

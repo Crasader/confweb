@@ -1,5 +1,5 @@
 <?php
-class InvitedSpeakerAction extends BaseAction{
+class InvitedspeakerAction extends BaseAction{
 	public function index(){
 		$Invited = M("invitedspeaker");
 		import("ORG.Util.Page");

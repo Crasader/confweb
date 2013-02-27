@@ -195,13 +195,13 @@ function Check()
 				<option value="否">否</option>
 			</select></td></tr>
 <tr><td>特殊要求</td><td><input name="special" type="text" /></td></tr>
-<tr><td><input type="submit" value="提交" onClick="Check()" /></td><td><input type="reset" value="重置" /></td></tr>
+<tr><td><input type="submit" value="提交" onClick="return Check()" /></td><td><input type="reset" value="重置" /></td></tr>
 </table>
 </form>
 <div id="templatemo_footer">
-		<p style="text-align:center"><br><a href="__ROOT__/admin.php" >地址：<?php echo ($address); ?><br/>
-			电话：<?php echo ($phone1); ?>,<?php echo ($phone2); ?>,<?php echo ($phone3); ?><br/>
-			传真：<?php echo ($fax); ?></a></p>
+		<p style="text-align:center">地址：<?php echo ($address); ?><br/>
+			电话：<?php echo ($phone1); ?>, <?php echo ($phone2); ?>, <?php echo ($phone3); ?><br/>
+			传真：<?php echo ($fax); ?></p>
 </div>
 </body>
 </html>

@@ -1,6 +1,7 @@
 <?php
 class AgendaAction extends BaseAction{
 	public function index(){
+		$this->assign("menu","Agenda");
 		$this->display("Public:agenda");
 	}
 	public function upload(){

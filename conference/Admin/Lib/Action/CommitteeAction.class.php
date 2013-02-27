@@ -19,8 +19,8 @@ class CommitteeAction extends BaseAction{
 			case "org":
 				$this->assign("typename","组织");break;
 		}
+		$this->assign("menu","Committee");
 		$this->assign("user",$user);
-		$this->assign(menu,"Members");
 		$this->display("Public:committee");
 	}
 	public function add(){
@@ -37,7 +37,7 @@ class CommitteeAction extends BaseAction{
 		$this->assign(title,"添加");
 		$this->assign(action,"adds");
 		$this->assign("dsp","detail");
-		$this->assign(menu,"Members");
+		$this->assign("menu","Committee");
 		$this->display("Public:committee");
 	}
 	public function adds(){
@@ -72,6 +72,7 @@ class CommitteeAction extends BaseAction{
 			$this->assign("dsp","detail");
 			$this->assign("action","edits");
 			$this->assign("title","修改");
+			$this->assign("menu","Committee");
 			$this->display("Public:committee");
 		}else{
 			$this->assign("jumpUrl","__URL__");

@@ -15,10 +15,11 @@ class BaseAction extends Action{
 		if(!in_array($act,$allowact)) $this->error('未知操作');
 		$id = is_array($checkboxid)?implode(',',$checkboxid):$checkboxid;
 		if(!$id) $this->error('ID丢失');
-		$tableId = array('Committee' => 'id','committee'=>'id','InvitedSpeaker' => 'id','invitedspeaker' => 'id');
+		$tableId = array('Committee' => 'id','committee'=>'id','Invitedspeaker' => 'id','invitedspeaker' => 'id','InvitedSpeaker'=>'id','Venue' => 'id','venue' => 'id','Accommodation'=>'id','accommodation'=>'id','Registrant'=>'id','registrant' =>'id');
 		isset($modulename) ? $modulename = $modulename : $modulename = MODULE_NAME;
 		switch($act){
 			case "delete":
+				$sql = 'DELETE FROM __TABLE__ where '.$tableId[$modulename].' IN ('.$id.')';
 				$Result = M($modulename)->execute('DELETE FROM __TABLE__ where '.$tableId[$modulename].' IN ('.$id.')');
 				$msg = "删除成功！";
 				break;

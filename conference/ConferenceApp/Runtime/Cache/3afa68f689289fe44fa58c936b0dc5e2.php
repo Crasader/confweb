@@ -65,10 +65,10 @@ li{ list-style:none;}
 
 <title>住宿</title>
 <table border="1">
-<?php if(is_array($acco)): $i = 0; $__LIST__ = $acco;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><tr><td><image src="<?php echo ($vo["photo"]); ?>"></td><td><a href="<?php echo ($vo["link"]); ?>" target="_blank"><?php echo ($vo["name"]); ?></a></td></tr><?php endforeach; endif; else: echo "" ;endif; ?>
+<?php if(is_array($acco)): $i = 0; $__LIST__ = $acco;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><tr><td><image src="__ROOT__/Attachments/photo/<?php echo ($vo["photo"]); ?>"></td><td><a href="<?php echo ($vo["link"]); ?>" target="_blank"><?php echo ($vo["name"]); ?></a></td></tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>
 <div id="templatemo_footer">
-		<p style="text-align:center"><br><a href="__ROOT__/admin.php" >地址：<?php echo ($address); ?><br/>
+		<p style="text-align:center">地址：<?php echo ($address); ?><br/>
 			电话：<?php echo ($phone1); ?>,<?php echo ($phone2); ?>,<?php echo ($phone3); ?><br/>
 			传真：<?php echo ($fax); ?></a></p>
 </div>

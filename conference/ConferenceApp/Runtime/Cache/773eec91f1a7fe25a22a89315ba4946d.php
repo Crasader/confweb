@@ -64,6 +64,15 @@ li{ list-style:none;}
 </div>
 
 <script language="javascript">
+function checkemail(str){
+	var Expression = /^(?:[a-z\d]+[_\-\+\.]?)*[a-z\d]+@(?:([a-z\d]+\-?)*[a-z\d]+\.)+([a-z]{2,})+$/
+	var objExp=new RegExp(Expression)
+	if(objExp.test(str)==true){
+		return true
+	}else{
+		return false
+	}
+}
 function Check()
 {
 	var iter = document.getElementsByName("name")
@@ -78,6 +87,11 @@ function Check()
 	if(i == "")
 	{
 		alert("邮箱不能为空！")
+		return false
+	}
+	if(!checkemail(i))
+	{
+		alert("邮箱格式错误！")
 		return false
 	}
 	iter = document.getElementsByName("organization")

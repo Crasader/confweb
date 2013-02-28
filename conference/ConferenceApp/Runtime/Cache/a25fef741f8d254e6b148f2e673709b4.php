@@ -4,11 +4,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>主页</title>
 <link href="../Public/templatemo_style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+
+div.header
+{
+width:580px;
+font-size:16px;
+text-align:center;
+}
+
+</style>
 </head>
-<body>
+<body style="background-image:url(./images/bg.jpg)">
+<link href="../Public/templatemo_style.css" rel="stylesheet" type="text/css" />
+
 <div id="templatemo_header_wrapper">
-  	<image src="__PUBLIC__/logo.jpg" />
-	
+  <div id="templatemo_header">
+    <div id="site_logo"></div>
+
+	</div>
   <!-- end of header -->
 </div>
 <style type="text/css">
@@ -16,7 +30,7 @@ body,ul,li{margin:0;padding:0;}
 li{ list-style:none;}
 .daohang{width:150px;float:left;
 margin-bottom:20px;
-margin-left:10px;
+margin-left:15%;
 margin-right:30px;}
 .daohang_in{width:150px;float:left;}
 .daohang_in ul{width:150px;float:left;}
@@ -66,7 +80,7 @@ margin-right:30px;}
   <!-- end of menu -->
 </div>
 
-<div style="float:left" style="margin-top:10px"><?php echo ($title); ?></div>
+<div class="header"><h1><?php echo ($title); ?></h1></div>
 <div style="float:left"><?php echo ($content); ?></div>
 
 <div id="templatemo_footer">

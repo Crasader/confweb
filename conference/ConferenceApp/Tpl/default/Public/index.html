@@ -4,15 +4,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>主页</title>
 <link href="../Public/templatemo_style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+
+div.header
+{
+width:580px;
+font-size:16px;
+text-align:center;
+}
+
+</style>
 </head>
-<body>
-<div id="templatemo_header_wrapper">
-  	<image src="__PUBLIC__/logo.jpg" />
-	
-  <!-- end of header -->
-</div>
-<include file="Public:sidebar"/>
-<div style="float:left" style="margin-top:10px">{$title}</div>
+<body style="background-image:url(./images/bg.jpg)">
+<include file="Public:header"/>
+<include file="Public:sidebar" />
+<div class="header"><h1>{$title}</h1></div>
 <div style="float:left">{$content}</div>
 
 <div id="templatemo_footer">

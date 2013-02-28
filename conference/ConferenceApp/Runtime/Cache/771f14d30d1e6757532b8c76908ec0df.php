@@ -5,7 +5,7 @@
 <title>主页</title>
 <link href="../Public/templatemo_style.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body class="bg">
 <title>会议流程</title>
 <link href="../Public/templatemo_style.css" rel="stylesheet" type="text/css" />
 

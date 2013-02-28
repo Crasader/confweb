@@ -14,7 +14,10 @@
 <style type="text/css">
 body,ul,li{margin:0;padding:0;}
 li{ list-style:none;}
-.daohang{width:150px;margin:10px;float:left;}
+.daohang{width:150px;float:left;
+margin-bottom:20px;
+margin-left:10px;
+margin-right:30px;}
 .daohang_in{width:150px;float:left;}
 .daohang_in ul{width:150px;float:left;}
 .daohang_in li{width:150px;float:left; line-height:27px; height:27px; background:url(http://cssdh.mianfeimoban.com/uploadfile/2011/1207/20111207125442468.gif) no-repeat;margin:1px 0; display:inline;}
@@ -64,15 +67,15 @@ li{ list-style:none;}
 </div>
 
 <title>会议地点</title>
-<table border="1">
+<table border="1" bordercolor="#84c247">
 <?php if(is_array($place)): $i = 0; $__LIST__ = $place;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><tr><td rowspan="3"><image src="__ROOT__/Attachments/photo/<?php echo ($vo["photo"]); ?>"></td><td><?php echo ($vo["confname"]); ?>(<?php echo ($vo["time"]); ?>)</td></tr>
 	<tr><td><?php echo ($vo["place"]); ?></td></tr>
 	<tr><td><?php echo ($vo["note"]); ?></td></tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>
 <div id="templatemo_footer">
 		<p style="text-align:center">地址：<?php echo ($address); ?><br/>
-			电话：<?php echo ($phone1); ?>,<?php echo ($phone2); ?>,<?php echo ($phone3); ?><br/>
-			传真：<?php echo ($fax); ?></a></p>
+			电话：<?php echo ($phone1); ?>, <?php echo ($phone2); ?>, <?php echo ($phone3); ?><br/>
+			传真：<?php echo ($fax); ?></p>
 </div>
 </body>
 </html>

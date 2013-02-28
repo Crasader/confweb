@@ -73,7 +73,7 @@ margin-right:30px;}
 	<tr><td><?php echo ($vo["note"]); ?></td></tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>
 <div id="templatemo_footer">
-		<p style="text-align:center">地址：<?php echo ($address); ?><br/>
+		<p style="text-align:center"><br>地址：<?php echo ($address); ?><br/>
 			电话：<?php echo ($phone1); ?>, <?php echo ($phone2); ?>, <?php echo ($phone3); ?><br/>
 			传真：<?php echo ($fax); ?></p>
 </div>

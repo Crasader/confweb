@@ -18,7 +18,7 @@ li{ list-style:none;}
 .daohang{width:150px;float:left;
 margin-bottom:20px;
 margin-left:10px;
-margin-right:10px;}
+margin-right:30px;}
 .daohang_in{width:150px;float:left;}
 .daohang_in ul{width:150px;float:left;}
 .daohang_in li{width:150px;float:left; line-height:27px; height:27px; background:url(http://cssdh.mianfeimoban.com/uploadfile/2011/1207/20111207125442468.gif) no-repeat;margin:1px 0; display:inline;}
@@ -69,7 +69,7 @@ margin-right:10px;}
 
 <iframe src="__PUBLIC__/program.pdf" width="800" height="600"></iframe>
 <div id="templatemo_footer">
-		<p style="text-align:center">地址：<?php echo ($address); ?><br/>
+		<p style="text-align:center"><br>地址：<?php echo ($address); ?><br/>
 			电话：<?php echo ($phone1); ?>, <?php echo ($phone2); ?>, <?php echo ($phone3); ?><br/>
 			传真：<?php echo ($fax); ?></p>
 </div>

@@ -5,10 +5,14 @@
 <title>主页</title>
 <link href="../Public/templatemo_style.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body style="background-image:url(images/bg.jpg)">
+<link href="../Public/templatemo_style.css" rel="stylesheet" type="text/css" />
+
 <div id="templatemo_header_wrapper">
-  	<image src="__PUBLIC__/logo.jpg" />
-	
+  <div id="templatemo_header">
+    <div id="site_logo"></div>
+
+	</div>
   <!-- end of header -->
 </div>
 <style type="text/css">
@@ -16,7 +20,7 @@ body,ul,li{margin:0;padding:0;}
 li{ list-style:none;}
 .daohang{width:150px;float:left;
 margin-bottom:20px;
-margin-left:10px;
+margin-left:15%;
 margin-right:30px;}
 .daohang_in{width:150px;float:left;}
 .daohang_in ul{width:150px;float:left;}

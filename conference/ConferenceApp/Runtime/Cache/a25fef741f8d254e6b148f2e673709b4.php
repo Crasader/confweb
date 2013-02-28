@@ -15,7 +15,7 @@ text-align:center;
 
 </style>
 </head>
-<body style="background-image:url(./images/bg.jpg)">
+<body style="background-image:url(images/bg.jpg)">
 <link href="../Public/templatemo_style.css" rel="stylesheet" type="text/css" />
 
 <div id="templatemo_header_wrapper">

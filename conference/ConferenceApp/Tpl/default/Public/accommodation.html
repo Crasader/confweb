@@ -7,11 +7,11 @@
 </head>
 <body style="background-image:url(images/bg.jpg)">
 <include file="Public:header"/>
-<include file="Public:sidebar" / >
+<include file="Public:sidebar"/ >
 <title>住宿</title>
-<table border="1" bordercolor="#84c247">
+<table border="1" bgcolor="#f5f6f5" style="margin-top:15px" bordercolor="#a8aca3">
 <volist name="acco" id="vo">
-	<tr><td><image src="__ROOT__/Attachments/photo/{$vo.photo}"></td><td><a href="{$vo.link}" target="_blank">{$vo.name}</a></td></tr>
+	<tr><td><image src="__ROOT__/Attachments/photo/{$vo.photo}"></td><td><h4><a href="{$vo.link}" target="_blank">{$vo.name}</a></h4></td></tr>
 </volist>
 </table>
 <include file="Public:footer"/>

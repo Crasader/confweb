@@ -8,9 +8,15 @@
 
 div.header
 {
-width:580px;
+width:780px;
 font-size:16px;
 text-align:center;
+float:left;
+}
+div.content
+{
+font-size:16px;
+text-align:left;
 }
 
 </style>
@@ -80,12 +86,14 @@ margin-right:30px;}
   <!-- end of menu -->
 </div>
 
-<div class="header"><h1><?php echo ($title); ?></h1></div>
-<div style="float:left"><?php echo ($content); ?></div>
+<div class="header"><h1><?php echo ($title); ?></h1>
+<div class="content"><h4><?php echo ($content); ?></h4></div>
+</div>
+
 
 <div id="templatemo_footer">
 		<p style="text-align:center"><br>地址：<?php echo ($address); ?><br/>
-			电话：<?php echo ($phone1); ?>,<?php echo ($phone2); ?>,<?php echo ($phone3); ?><br/>
+			电话：<?php echo ($phone1); ?>, <?php echo ($phone2); ?>, <?php echo ($phone3); ?><br/>
 			传真：<?php echo ($fax); ?></p>
 </div>
 

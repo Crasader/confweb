@@ -19,13 +19,13 @@
 body,ul,li{margin:0;padding:0;}
 li{ list-style:none;}
 .daohang{width:150px;float:left;
-margin-bottom:20px;
+margin-bottom:120px;
 margin-left:15%;
 margin-right:30px;}
 .daohang_in{width:150px;float:left;}
 .daohang_in ul{width:150px;float:left;}
-.daohang_in li{width:150px;float:left; line-height:27px; height:27px; background:url(http://cssdh.mianfeimoban.com/uploadfile/2011/1207/20111207125442468.gif) no-repeat;margin:1px 0; display:inline;}
-.daohang_in li a{ font-size:12px; color:#439800; text-decoration:none; padding-left:15px;} 
+.daohang_in li{width:150px;float:left; line-height:27px; height:27px; background:url(http://cssdh.mianfeimoban.com/uploadfile/2011/1207/20111207125442468.gif) no-repeat;margin:5px 0; display:inline;}
+.daohang_in li a{ font-size:18px; color:#439800; text-decoration:none; padding-left:15px;} 
 </style>
 <div class="daohang">
    <div class="daohang_in">
@@ -192,7 +192,7 @@ function changebook()
 }
 </script>
 <form name="reg" method="post" action="__URL__/dealreg">
-<table>
+<table style="margin-top:12px">
 <tr><td>职业</td><td>
 			<select name="occupation">
 				<option value="教授">教授</option>

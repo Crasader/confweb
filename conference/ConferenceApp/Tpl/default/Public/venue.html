@@ -7,13 +7,13 @@
 </head>
 <body>
 <include file="Public:header"/>
-<include file="Public:sidebar"/ >
+<include file="Public:sidebar" / >
 <title>会议地点</title>
-<table border="1" bordercolor="#84c247">
+<table border="1" bgcolor="#f5f6f5" style="margin-top:15px" bordercolor="#a8aca3">
 <volist name="place" id="vo">
-	<tr><td rowspan="3"><image src="__ROOT__/Attachments/photo/{$vo.photo}"></td><td>{$vo.confname}({$vo.time})</td></tr>
-	<tr><td>{$vo.place}</td></tr>
-	<tr><td>{$vo.note}</td></tr>
+	<tr><td rowspan="3"><image src="__ROOT__/Attachments/photo/{$vo.photo}"></td><td><h4>{$vo.confname}({$vo.time})</h4></td></tr>
+	<tr><td><h4>{$vo.place}</h4></td></tr>
+	<tr><td><h4>{$vo.note}</h4></td></tr>
 </volist>
 </table>
 <include file="Public:footer"/>

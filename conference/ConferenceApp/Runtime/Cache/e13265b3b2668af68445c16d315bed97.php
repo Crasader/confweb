@@ -19,13 +19,13 @@
 body,ul,li{margin:0;padding:0;}
 li{ list-style:none;}
 .daohang{width:150px;float:left;
-margin-bottom:20px;
+margin-bottom:120px;
 margin-left:15%;
 margin-right:30px;}
 .daohang_in{width:150px;float:left;}
 .daohang_in ul{width:150px;float:left;}
-.daohang_in li{width:150px;float:left; line-height:27px; height:27px; background:url(http://cssdh.mianfeimoban.com/uploadfile/2011/1207/20111207125442468.gif) no-repeat;margin:1px 0; display:inline;}
-.daohang_in li a{ font-size:12px; color:#439800; text-decoration:none; padding-left:15px;} 
+.daohang_in li{width:150px;float:left; line-height:27px; height:27px; background:url(http://cssdh.mianfeimoban.com/uploadfile/2011/1207/20111207125442468.gif) no-repeat;margin:5px 0; display:inline;}
+.daohang_in li a{ font-size:18px; color:#439800; text-decoration:none; padding-left:15px;} 
 </style>
 <div class="daohang">
    <div class="daohang_in">
@@ -71,10 +71,10 @@ margin-right:30px;}
 </div>
 
 <title>会议地点</title>
-<table border="1" bordercolor="#84c247">
-<?php if(is_array($place)): $i = 0; $__LIST__ = $place;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><tr><td rowspan="3"><image src="__ROOT__/Attachments/photo/<?php echo ($vo["photo"]); ?>"></td><td><?php echo ($vo["confname"]); ?>(<?php echo ($vo["time"]); ?>)</td></tr>
-	<tr><td><?php echo ($vo["place"]); ?></td></tr>
-	<tr><td><?php echo ($vo["note"]); ?></td></tr><?php endforeach; endif; else: echo "" ;endif; ?>
+<table border="1" bgcolor="#f5f6f5" style="margin-top:15px" bordercolor="#a8aca3">
+<?php if(is_array($place)): $i = 0; $__LIST__ = $place;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><tr><td rowspan="3"><image src="__ROOT__/Attachments/photo/<?php echo ($vo["photo"]); ?>"></td><td><h4><?php echo ($vo["confname"]); ?>(<?php echo ($vo["time"]); ?>)</h4></td></tr>
+	<tr><td><h4><?php echo ($vo["place"]); ?></h4></td></tr>
+	<tr><td><h4><?php echo ($vo["note"]); ?></h4></td></tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>
 <div id="templatemo_footer">
 		<p style="text-align:center"><br>地址：<?php echo ($address); ?><br/>

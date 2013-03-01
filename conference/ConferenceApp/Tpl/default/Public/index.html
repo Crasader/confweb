@@ -8,24 +8,28 @@
 
 div.header
 {
-width:580px;
+width:780px;
 font-size:16px;
 text-align:center;
+float:left;
+}
+div.content
+{
+font-size:16px;
+text-align:left;
 }
 
 </style>
 </head>
 <body >
 <include file="Public:header" />
-<include file="Public:sidebar" />
-<div class="header"><h1>{$title}</h1></div>
-<div style="float:left">{$content}</div>
-
-<div id="templatemo_footer">
-		<p style="text-align:center"><br>地址：{$address}<br/>
-			电话：{$phone1},{$phone2},{$phone3}<br/>
-			传真：{$fax}</p>
+<include file="Public:sidebar"/>
+<div class="header"><h1>{$title}</h1>
+<div class="content"><h4>{$content}</h4></div>
 </div>
+
+
+<include file="Public:footer"/>
 
 </body>
 </html>

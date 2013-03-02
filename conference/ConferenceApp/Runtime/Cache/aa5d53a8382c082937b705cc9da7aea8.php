@@ -72,7 +72,7 @@ margin-right:30px;}
 
 <title>邀请的演讲者</title>
 <table border="1" bgcolor="#f5f6f5" style="margin-top:15px" bordercolor="#a8aca3">
-<?php if(is_array($people)): $i = 0; $__LIST__ = $people;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><tr><td><h4><?php echo ($vo["englishname"]); ?>(<?php echo ($vo["chinesename"]); ?>),<?php echo ($vo["school"]); ?></h4></td></tr><?php endforeach; endif; else: echo "" ;endif; ?>
+<?php if(is_array($people)): $i = 0; $__LIST__ = $people;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><tr><td><h4><?php echo ($vo["englishname"]); ?>(<?php echo ($vo["chinesename"]); ?>),<?php echo ($vo["school"]); ?><?php if($vo["introduction"] != ''): ?>,<?php echo ($vo["introduction"]); ?><?php endif; ?></h4></td></tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>
 <div id="templatemo_footer">
 		<p style="text-align:center"><br>地址：<?php echo ($address); ?><br/>

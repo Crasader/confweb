@@ -4,7 +4,6 @@ class PublicAction extends Action{
 		$sid = Session::get(C('USER_AUTH_KEY'));
 	}
 	public function login(){
-		print_r($_SESSION);
 		$this->display("Public:login");
 	}
 	public function logins(){

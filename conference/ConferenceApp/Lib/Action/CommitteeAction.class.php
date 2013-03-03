@@ -10,11 +10,11 @@ class CommitteeAction extends BaseAction{
 		switch($type)
 		{
 		case "sci":
-			$this->assign("type","学术");break;
+			$this->assign("type","学术");$this->assign("menu","ScientificCommittee");break;
 		case "exe":
-			$this->assign("type","执行");break;
+			$this->assign("type","执行");$this->assign("menu","ExecutiveCommittee");break;
 		case "org":
-			$this->assign("type","组织");break;
+			$this->assign("type","组织");$this->assign("menu","OrganizingCommittee");break;
 		}
 		$this->assign("people",$p);
 		$this->display("Public:committee");

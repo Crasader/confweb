@@ -1,6 +1,7 @@
 <?php
 class RegistrationAction extends BaseAction{
 	public function index(){
+		$this->assign("menu","Registration");
 		$this->display("Public:registration");
 	}
 	public function dealreg(){

@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>主页</title>
 <link href="../Public/templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="../Public/sidebar.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <link href="../Public/templatemo_style.css" rel="stylesheet" type="text/css" />
@@ -15,18 +16,6 @@
 	</div>
   <!-- end of header -->
 </div>
-<style type="text/css">
-body,ul,li{margin:0;padding:0;}
-li{ list-style:none;}
-.daohang{width:150px;float:left;
-margin-bottom:120px;
-margin-left:15%;
-margin-right:30px;}
-.daohang_in{width:150px;float:left;}
-.daohang_in ul{width:150px;float:left;}
-.daohang_in li{width:150px;float:left; line-height:27px; height:27px; background:url(http://cssdh.mianfeimoban.com/uploadfile/2011/1207/20111207125442468.gif) no-repeat;margin:5px 0; display:inline;}
-.daohang_in li a{ font-size:18px; color:#439800; text-decoration:none; padding-left:15px;} 
-</style>
 <div class="daohang">
    <div class="daohang_in">
     <ul>
@@ -62,7 +51,7 @@ margin-right:30px;}
 	<?php else: ?>
 		<li><a href="__ROOT__/index.php/accommodation">住宿</a></li><?php endif; ?>
 	
-	<?php if($menu == 'Accommodation'): ?><li><a href="__ROOT__/index.php/registration" class="current">注册</a></li>
+	<?php if($menu == 'Registration'): ?><li><a href="__ROOT__/index.php/registration" class="current">注册</a></li>
 	<?php else: ?>
 		<li><a href="__ROOT__/index.php/registration">注册</a></li><?php endif; ?>
     </ul>
@@ -71,7 +60,7 @@ margin-right:30px;}
 </div>
 
 <title><?php echo ($type); ?>委员会</title>
-<table border="1" bgcolor="#f5f6f5" style="margin-top:15px" bordercolor="#a8aca3">
+<table border="1"  bgcolor="#f5f6f5" style="margin-top:15px" bordercolor="#a8aca3">
 <?php if(is_array($people)): $i = 0; $__LIST__ = $people;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><tr><td><h4><?php echo ($vo["englishname"]); ?>(<?php echo ($vo["chinesename"]); ?>)</h4></td><td><h4><?php echo ($vo["introduction"]); ?></h4></td></tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>
 <div id="templatemo_footer">

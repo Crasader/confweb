@@ -4,6 +4,7 @@ class IndexAction extends BaseAction{
 		$home = M("home")->select();
 		$this->assign("title",$home[0]['title']);
 		$this->assign("content",$home[0]['content']);
+		$this->assign("menu","Home");
 		$this->display("Public:index");
 	}
 }

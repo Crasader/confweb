@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>主页</title>
 <link href="../Public/templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="../Public/sidebar.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <title>会议流程</title>
@@ -16,18 +17,6 @@
 	</div>
   <!-- end of header -->
 </div>
-<style type="text/css">
-body,ul,li{margin:0;padding:0;}
-li{ list-style:none;}
-.daohang{width:150px;float:left;
-margin-bottom:120px;
-margin-left:15%;
-margin-right:30px;}
-.daohang_in{width:150px;float:left;}
-.daohang_in ul{width:150px;float:left;}
-.daohang_in li{width:150px;float:left; line-height:27px; height:27px; background:url(http://cssdh.mianfeimoban.com/uploadfile/2011/1207/20111207125442468.gif) no-repeat;margin:5px 0; display:inline;}
-.daohang_in li a{ font-size:18px; color:#439800; text-decoration:none; padding-left:15px;} 
-</style>
 <div class="daohang">
    <div class="daohang_in">
     <ul>
@@ -63,7 +52,7 @@ margin-right:30px;}
 	<?php else: ?>
 		<li><a href="__ROOT__/index.php/accommodation">住宿</a></li><?php endif; ?>
 	
-	<?php if($menu == 'Accommodation'): ?><li><a href="__ROOT__/index.php/registration" class="current">注册</a></li>
+	<?php if($menu == 'Registration'): ?><li><a href="__ROOT__/index.php/registration" class="current">注册</a></li>
 	<?php else: ?>
 		<li><a href="__ROOT__/index.php/registration">注册</a></li><?php endif; ?>
     </ul>

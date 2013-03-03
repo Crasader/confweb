@@ -54,7 +54,6 @@ class AccommodationAction extends BaseAction{
 		if(!empty($_FILES['photo']['name'])){
 			$data['photo'] = $this->_upload("photo",false,300,400,true);
 		}
-		print_r($data);
 		if(M("Accommodation")->save($data))
 			$this->success("修改成功！");
 		else

@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>主页</title>
 <link href="../Public/templatemo_style.css" rel="stylesheet" type="text/css" />
 <link href="../Public/sidebar.css" rel="stylesheet" type="text/css" />
 </head>
@@ -35,13 +34,13 @@
 	<?php else: ?>
 		<li><a href="__ROOT__/index.php/committee/index/type/org/">组织委员会</a></li><?php endif; ?>
 	
-	<?php if($menu == 'InvitedSpeaker'): ?><li><a href="__ROOT__/index.php/invitedspeaker/" class="current">邀请的演讲者</a></li>
+	<?php if($menu == 'InvitedSpeaker'): ?><li><a href="__ROOT__/index.php/invitedspeaker/" class="current">报告人</a></li>
 	<?php else: ?>
-		<li><a href="__ROOT__/index.php/invitedspeaker/">邀请的演讲者</a></li><?php endif; ?>
+		<li><a href="__ROOT__/index.php/invitedspeaker/">报告人</a></li><?php endif; ?>
 	
-	<?php if($menu == 'Program'): ?><li><a href="__ROOT__/index.php/program/" class="current">会议流程</a></li>
+	<?php if($menu == 'Program'): ?><li><a href="__ROOT__/index.php/program/" class="current">会议日程</a></li>
 	<?php else: ?>
-		<li><a href="__ROOT__/index.php/program/">会议流程</a></li><?php endif; ?>
+		<li><a href="__ROOT__/index.php/program/">会议日程</a></li><?php endif; ?>
 	
     <?php if($menu == 'Venue'): ?><li><a href="__ROOT__/index.php/venue" class="current">会议地点</a></li>
 	<?php else: ?>
@@ -60,7 +59,7 @@
 </div>
 
 <title><?php echo ($type); ?>委员会</title>
-<table border="1"  bgcolor="#f5f6f5" style="margin-top:15px" bordercolor="#a8aca3">
+<table border="0"  bgcolor="#f5f6f5" style="margin-top:15px" bordercolor="#a8aca3">
 <?php if(is_array($people)): $i = 0; $__LIST__ = $people;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><tr><td><h4><?php echo ($vo["englishname"]); ?>(<?php echo ($vo["chinesename"]); ?>)</h4></td><td><h4><?php echo ($vo["introduction"]); ?></h4></td></tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>
 <div id="templatemo_footer">

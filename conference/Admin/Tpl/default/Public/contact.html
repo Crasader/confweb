@@ -1,0 +1,70 @@
+<tagLib name="html,cx" />
+<include file="Public:header" />
+<script language="javascript">
+function validate_form(){
+	var iter = document.getElementsByName("address")
+	var i = iter[0].value
+	if(i == ""){
+		alert("没有填写地址！")
+		return false
+	}
+	iter = document.getElementsByName("phone1")
+	i = iter[0].value
+	if(i == ""){
+		alert("没有填写第一个电话！")
+		return false
+	}
+	iter = document.getElementsByName("phone2")
+	i = iter[0].value
+	if(i == ""){
+		alert("没有填写第二个电话！")
+		return false
+	}
+	iter = document.getElementsByName("phone3")
+	i = iter[0].value
+	if(i == ""){
+		alert("没有填写第三个电话！")
+		return false
+	}
+	iter = document.getElementsByName("fax")
+	i = iter[0].value
+	if(i == ""){
+		alert("没有填写传真！")
+		return false
+	}
+	return true
+}
+</script>
+<div class="cbody b-box blank10">
+	<include file="Public:menu" />
+	<div class="b-area-w f_r">
+		<h4>联系方式内容编辑</h4>
+		<form name="pagesform" method="post" action="__URL__/edits">
+		<table border="0" cellspacing="1" class="tb-b">
+			<tr>
+				<th>地址</th>
+				<td><input type="text" name="address" value="{$contact.address}" class="input-long" /></td>
+			</tr>
+			<tr>
+				<th>电话1</th>
+				<td><input type="text" name="phone1" value="{$contact.phone1}" class="input-long" /></td>
+			</tr>
+			<tr>
+				<th>电话2</th>
+				<td><input type="text" name="phone2" value="{$contact.phone1}" class="input-long" /></td>
+			</tr>
+			<tr>
+				<th>电话3</th>
+				<td><input type="text" name="phone3" value="{$contact.phone3}" class="input-long" /></td>
+			</tr>
+			<tr>
+				<th>传真</th>
+				<td><input type="text" name="fax" value="{$contact.fax}" class="input-long" /></td>
+			</tr>
+		</table>
+		<div align="center"><input type="submit" value="提交" class="input-btn-b" onclick="return validate_form()"/></div>
+		</form>
+	</div>
+	<div class="clear"></div>
+</div>
+<include file="Public:footer" />

@@ -30,7 +30,7 @@ class PublicAction extends Action{
         Image::buildImageVerify(4,1,$type,'','20px'); 
     }
 	public function logout(){
-		if(Session::is_set(C('USER_AUTH_KEY'))){
+		if(Session::is_set('admin')){
 			Session::clear();
 			$this->assign('jumpUrl',__URL__.'/login');
 			$this->success("注销成功！");

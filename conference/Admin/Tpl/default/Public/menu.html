@@ -46,4 +46,22 @@
 	<else />
 	<li><a href="__APP__/Registrant">会员管理</a></li>
 	</if>
+	
+	<if condition="$menu eq 'Contact'">
+	<li><a href="__APP__/Contact" class="home-link">联系方式管理</a></li>
+	<else />
+	<li><a href="__APP__/Contact">联系方式管理</a></li>
+	</if>
+	
+	<if condition="$menu eq 'Homeimage'">
+	<li><a href="__APP__/Homeimage" class="home-link">主页图片管理</a></li>
+	<else />
+	<li><a href="__APP__/Homeimage">主页图片管理</a></li>
+	</if>
+	
+	<if condition="$menu eq 'Changepassword'">
+	<li><a href="__APP__/Changepassword" class="home-link">修改密码</a></li>
+	<else />
+	<li><a href="__APP__/Changepassword">修改密码</a></li>
+	</if>
 </ul>

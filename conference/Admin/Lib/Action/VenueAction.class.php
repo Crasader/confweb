@@ -24,6 +24,7 @@ class VenueAction extends BaseAction{
 		$data["confname"] = $_POST["confname"];
 		$data["time"] = $_POST["time"];
 		$data["place"] = $_POST["place"];
+		$data["placelink"] = $_POST["placelink"];
 		$data["note"] = $_POST["note"];
 		if(!empty($_FILES['photo']['name'])){
 			$data['photo'] = $this->_upload("photo",false,300,400,true);
@@ -54,6 +55,7 @@ class VenueAction extends BaseAction{
 		$data["confname"] = $_POST["confname"];
 		$data["time"] = $_POST["time"];
 		$data["place"] = $_POST["place"];
+		$data["placelink"] = $_POST["placelink"];
 		$data["note"] = $_POST["note"];
 		if(!empty($_FILES['photo']['name'])){
 			$data['photo'] = $this->_upload("photo",false,300,400,true);

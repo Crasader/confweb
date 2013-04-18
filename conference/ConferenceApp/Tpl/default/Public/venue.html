@@ -12,7 +12,11 @@
 <table border="0" bgcolor="#f5f6f5" style="margin-top:15px" bordercolor="#a8aca3">
 <volist name="place" id="vo">
 	<tr><td rowspan="3"><image src="__ROOT__/Attachments/photo/{$vo.photo}"></td><td><h4>{$vo.confname}({$vo.time})</h4></td></tr>
-	<tr><td><h4>{$vo.place}</h4></td></tr>
+	<tr><td><h4>
+		<if condition = "$vo.placelink eq ''">{$vo.place}
+		<else /><a href="{$vo.placelink}">{$vo.place}</a>
+		</if>
+	</h4></td></tr>
 	<tr><td><h4>{$vo.note}</h4></td></tr>
 </volist>
 </table>

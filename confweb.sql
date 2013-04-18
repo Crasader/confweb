@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 06, 2013 at 07:19 AM
+-- Generation Time: Apr 18, 2013 at 11:56 AM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.3.13
 
@@ -229,6 +229,7 @@ CREATE TABLE IF NOT EXISTS `venue` (
   `confname` varchar(128) COLLATE utf8_bin NOT NULL,
   `time` varchar(16) COLLATE utf8_bin NOT NULL,
   `place` varchar(128) COLLATE utf8_bin NOT NULL,
+  `placelink` varchar(512) COLLATE utf8_bin NOT NULL,
   `note` varchar(2048) COLLATE utf8_bin NOT NULL,
   `photo` varchar(256) COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`)
@@ -238,8 +239,8 @@ CREATE TABLE IF NOT EXISTS `venue` (
 -- Dumping data for table `venue`
 --
 
-INSERT INTO `venue` (`id`, `confname`, `time`, `place`, `note`, `photo`) VALUES
-(1, 'First Day of the Conference', '2013-1-10', 'Zhejiang People''s Great Hall', 'The morning session (Opening Ceremony) is open to invited guests and registered participants ONLY', '2013/02/27/1361940537186.jpg');
+INSERT INTO `venue` (`id`, `confname`, `time`, `place`, `placelink`, `note`, `photo`) VALUES
+(1, 'First Day of the Conference', '2013-1-10', '测试地点', '', 'The morning session (Opening Ceremony) is open to invited guests and registered participants ONLY', '2013/02/27/1361940537186.jpg');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 03, 2013 at 02:55 PM
+-- Generation Time: Mar 06, 2013 at 07:19 AM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.3.13
 
@@ -96,19 +96,21 @@ INSERT INTO `committee` (`id`, `englishname`, `chinesename`, `introduction`, `ty
 --
 
 CREATE TABLE IF NOT EXISTS `contact` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `address` varchar(256) COLLATE utf8_bin NOT NULL,
   `phone1` varchar(64) COLLATE utf8_bin NOT NULL,
   `phone2` varchar(64) COLLATE utf8_bin DEFAULT NULL,
   `phone3` varchar(64) COLLATE utf8_bin DEFAULT NULL,
-  `fax` varchar(64) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='contact内容';
+  `fax` varchar(64) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='contact内容' AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `contact`
 --
 
-INSERT INTO `contact` (`address`, `phone1`, `phone2`, `phone3`, `fax`) VALUES
-('Mailbox 1511, Center of Mathematical Sciences, Zhejiang University, Hangzhou 310027, China', ' 0086-571-87953030', '87974070', '15824122464', '0086-571-87953035');
+INSERT INTO `contact` (`id`, `address`, `phone1`, `phone2`, `phone3`, `fax`) VALUES
+(1, 'Mailbox 1511, Center of Mathematical Sciences, Zhejiang University, Hangzhou 310027, China', ' 0086-571-87953030', ' 0086-571-87953030', '15824122464', '0086-571-87953035');
 
 -- --------------------------------------------------------
 
@@ -157,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `invitedspeaker` (
   `introduction` varchar(64) COLLATE utf8_bin NOT NULL,
   `rank` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='邀请的speaker' AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='邀请的speaker' AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `invitedspeaker`

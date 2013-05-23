@@ -42,7 +42,6 @@ class CommitteeAction extends BaseAction{
 	}
 	public function adds(){
 		$Committee = M("committee");
-		$data["chinesename"] = $_POST["chinesename"];
 		$data["englishname"] = $_POST["englishname"];
 		$data["introduction"] = $_POST["introduction"];
 		$data["rank"] = $_POST["rank"];

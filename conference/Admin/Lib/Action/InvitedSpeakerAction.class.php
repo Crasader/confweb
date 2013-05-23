@@ -21,7 +21,6 @@ class InvitedspeakerAction extends BaseAction{
 	}
 	public function adds(){
 		$Invited = M("invitedspeaker");
-		$data["chinesename"] = $_POST["chinesename"];
 		$data["englishname"] = $_POST["englishname"];
 		$data["school"] = $_POST["school"];
 		$data["introduction"] = $_POST["introduction"];

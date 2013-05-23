@@ -5,15 +5,8 @@ table.info
 </style>
 <script language="javascript">
 function check(){
-	var iter = document.getElementsByName("chinesename")
+	var iter = document.getElementsByName("englishname")
 	var i = iter[0].value
-	if(i == "")
-	{
-		alert("中文名不能为空！")
-		return false
-	}
-	iter = document.getElementsByName("englishname")
-	i = iter[0].value
 	if(i == "")
 	{
 		alert("英文名不能为空！")
@@ -46,7 +39,7 @@ function check(){
 			<h4><a href="__APP__/Allcommittee">委员会管理</a>>><a href="__URL__/index/type/{$type}">{$typename}委员会</a>>>{$title}</h4>
 			<form name="memberform" method="post" enctype="multipart/form-data" action="__URL__/{$action}">
 			<table>
-			<tr><th>中文名</th><td><input type="text" name="chinesename" value="{$person.chinesename}" /></td></tr>
+			<!--<tr><th>中文名</th><td><input type="text" name="chinesename" value="{$person.chinesename}" /></td></tr>-->
 			<tr><th>英文名</th><td><input type="text" name="englishname" value="{$person.englishname}" /></td></tr>
 			<tr><th>简介</th><td><input type="text" name="introduction" value="{$person.introduction}" /></td></tr>
 			<tr><th>排名</th><td><input type="text" name="rank" value="{$person.rank}" />
@@ -71,7 +64,7 @@ function check(){
 			<tr>
 				<td><input name="id[]" type="checkbox" id="id[]" value="{$u.id}" class="input-cb" /></td>
 				<td id={$u.id}>{$u.id}</td>
-				<td>{$u.englishname}({$u.chinesename})</td>
+				<td>{$u.englishname}</td>
 				<script language="javascript">
 					function confirmDel(value) {
 						var items=value.split("/");

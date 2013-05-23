@@ -11,7 +11,9 @@
 <title>报告人</title>
 <table border="0" bgcolor="#f5f6f5" style="margin-top:15px" bordercolor="#a8aca3">
 <volist name="people" id="vo">
-	<tr><td><h4>{$vo.englishname} {$vo.chinesename} {$vo.school} <if condition="$vo.introduction neq ''">{$vo.introduction}</if></h4></td></tr>
+	<tr><td><h4>{$vo.englishname}&nbsp;&nbsp;&nbsp;&nbsp;</h4></td>
+	<td><h4>{$vo.school}&nbsp;&nbsp;&nbsp;&nbsp;</h4></td>
+	<if condition="$vo.introduction neq ''"><td><h4>{$vo.introduction}</h4></td></if></tr>
 </volist>
 </table>
 <include file="Public:footer"/>

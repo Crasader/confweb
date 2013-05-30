@@ -1,13 +1,15 @@
 body,ul,li{margin:0;padding:0;}
 li{ list-style:none;}
-.daohang{width:180px;float:left;
-margin-bottom:120px;
-margin-left:20%;
-margin-right:30px;}
-.daohang_in{width:180px;float:left;}
-.daohang_in ul{width:180px;float:left;}
-.daohang_in li{width:180px;float:left; line-height:27px; height:27px; background:url(images/daohang.gif)
- no-repeat;margin:5px 0; display:inline;}
-.daohang_in li a{ font-size:10px; color:#439800; text-decoration:none; padding-left:15px; font-weight:500;} 
-.daohang .daohang_in a.current {font-size:10px; color:#0000FF; text-decoration:none; padding-left:15px;}
-.daohang .daohang_in a:hover {font-size:10px; color:#0000A0; text-decoration:none; padding-left:15px;}
+.daohang{width:15%;
+height:80%;
+float:left;
+margin-bottom:10%;
+margin-left:10%;
+margin-right:10%;}
+.daohang_in{width:100%;float:left;}
+.daohang_in ul{width:100%;float:left;}
+.daohang_in li{width:100%;float:left; line-height:27px; height:27px; background:url(images/daohang.gif)
+ no-repeat;margin:2%; display:inline;}
+.daohang_in li a{ font-size:100%; color:#439800; text-decoration:none; padding-left:5%; font-weight:500;} 
+.daohang .daohang_in a.current {font-size:100%; color:#0000FF; text-decoration:none; padding-left:5%;}
+.daohang .daohang_in a:hover {font-size:100%; color:#0000A0; text-decoration:none; padding-left:5%;}

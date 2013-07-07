@@ -6,6 +6,16 @@ class BaseAction extends Action{
 			redirect(PHP_FILE .C('USER_AUTH_GATEWAY'));
 		}
 	}
+	public function file_exists_case($filename) {
+		if (is_file($filename)) {
+			if (strstr(PHP_OS, 'WIN')) {
+				if (basename(realpath($filename)) != basename($filename))
+					return 0;
+			}
+			return 1;
+		}
+		return 0;
+	}
 	public function _batch($modulename){
 		$checkboxid = $_REQUEST['id'];
 		if(!$checkboxid) $this->error("请选择记录！");

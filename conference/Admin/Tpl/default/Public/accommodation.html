@@ -48,7 +48,7 @@ function check(){
 			<table>
 			<tr><th>酒店名称</th><td><input type="text" name="name" value="{$hotel.name}" /></td></tr>
 			<tr><th>酒店网址链接</th><td><input type="text" name="link" value="{$hotel.link}" /></td></tr>
-			<tr><th>照片</th><td><input type="file" name="photo" value="{$hotel.photo}" /><input type="hidden" name="id" value="{$_GET['id']}"></td></tr>
+			<tr><th>照片</th><td><input type="file" name="photo" value="{$hotel.photo}" /><if condition="$hotel.photo neq '' and $title eq '修改'"><a href="__URL__/delimg/id/{$_GET['id']}">删除图片</a></if><input type="hidden" name="id" value="{$_GET['id']}"></td></tr>
 			</table>
 			<div align="center"><input type="submit" value="提交" class="input-btn-b" onclick="return check()"/></div>
 		</form>

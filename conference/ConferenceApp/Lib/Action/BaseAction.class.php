@@ -8,5 +8,15 @@ class BaseAction extends Action{
 		$this->assign("phone3",$footer[0]['phone3']);
 		$this->assign("fax",$footer[0]['fax']);
 	}
+	public function file_exists_case($filename) {
+		if (is_file($filename)) {
+			if (strstr(PHP_OS, 'WIN')) {
+				if (basename(realpath($filename)) != basename($filename))
+					return 0;
+			}
+			return 1;
+		}
+		return 0;
+	}
 }
 ?>

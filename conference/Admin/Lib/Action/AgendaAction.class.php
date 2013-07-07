@@ -2,6 +2,7 @@
 class AgendaAction extends BaseAction{
 	public function index(){
 		$this->assign("menu","Agenda");
+		$this->isex = $this->file_exists_case("./Public/program.pdf");
 		$this->display("Public:agenda");
 	}
 	public function upload(){
@@ -18,6 +19,11 @@ class AgendaAction extends BaseAction{
 		else{
 			$this->error("上传失败！");
 		}
+	}
+	public function del(){
+		unlink("./Public/program.pdf");
+		$this->assign("jumpUrl","__URL__/index");
+		$this->success("删除成功");
 	}
 }
 ?>

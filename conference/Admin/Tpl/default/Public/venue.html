@@ -50,7 +50,7 @@ function check(){
 			<tr><th>时间</th><td><input type="text" name="time" value="{$venue.time}" /></td></tr>
 			<tr><th>地点</th><td><input type="text" name="place" value="{$venue.place}" /></td></tr>
 			<tr><th>地点链接</th><td><input type="text" name="placelink" value="{$venue.placelink}" /></td></tr>
-			<tr><th>照片</th><td><input type="file" name="photo" value="{$venue.photo}" />
+			<tr><th>照片</th><td><input type="file" name="photo" value="{$venue.photo}" /><if condition="$venue.photo neq '' and $title eq '修改'"><a href="__URL__/delimg/id/{$_GET['id']}">删除图片</a></if></td>
 			<tr><th>备注</th><td><input type="text" name="note" value="{$venue.note}" /><input type="hidden" name="id" value="{$_GET['id']}"></td></tr>
 			</table>
 			<div align="center"><input type="submit" value="提交" class="input-btn-b" onclick="return check()"/></div>

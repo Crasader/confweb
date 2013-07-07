@@ -11,7 +11,7 @@
 <title>会议地点</title>
 <table border="0" bgcolor="#f5f6f5" style="margin-top:15px" bordercolor="#a8aca3">
 <volist name="place" id="vo">
-	<tr><td rowspan="3"><image src="__ROOT__/Attachments/photo/{$vo.photo}"></td><td><h4>{$vo.confname}({$vo.time})</h4></td></tr>
+	<tr><td rowspan="3"><if condition="$vo.photo neq ''"><image src="__ROOT__/Attachments/photo/{$vo.photo}"></if></td><td><h4>{$vo.confname}({$vo.time})</h4></td></tr>
 	<tr><td><h4>
 		<if condition = "$vo.placelink eq ''">{$vo.place}
 		<else /><a href="{$vo.placelink}">{$vo.place}</a>

@@ -9,7 +9,11 @@
 <title>会议日程</title>
 <include file="Public:header"/>
 <include file="Public:sidebar"/ >
-<embed src="__PUBLIC__/program.pdf" width="60%" height="300px" style="margin-top:0.5%;float:left"></embed>
+<if condition="$isex eq 1">
+	<embed src="__PUBLIC__/program.pdf" width="60%" height="300px" style="margin-top:0.5%;float:left"></embed>
+<else/>
+	<font size="5" color="green">Waiting...</font>
+</if>
 <include file="Public:footer"/>
 </body>
 </html>

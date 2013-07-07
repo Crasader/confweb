@@ -65,6 +65,12 @@ class VenueAction extends BaseAction{
 		else
 			$this->error("修改失败或无修改！");
 	}
+	public function delimg(){
+		$data["photo"] = "";
+		$cond["id"] = $_GET["id"];
+		M("venue")->where($cond)->save($data);
+		$this->success("删除成功");
+	}
 	public function batch(){
 		$this->_batch();
 	}
